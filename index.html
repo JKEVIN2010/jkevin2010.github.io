@@ -65,6 +65,8 @@
     .paper-title { font: 400 1.4rem/1.45 var(--serif); margin-bottom: .65rem; letter-spacing: -.012em; }
     .paper-title a { color: var(--ink); text-decoration: none; }
     .paper-title a:hover { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; }
+    .paper-authors { color: var(--muted); font-size: .9375rem; line-height: 1.6; margin-bottom: .35rem; }
+    .paper-authors strong { color: var(--ink); font-weight: 650; }
     .paper-meta { color: var(--accent); font-size: .875rem; line-height: 1.6; margin-bottom: .65rem; }
     .paper-description { font-size: 1rem; line-height: 1.7; }
     .full-record { border-top: 1px solid var(--line); padding-top: 1.3rem; display: flex; align-items: center; flex-wrap: wrap; column-gap: 1.2rem; color: var(--muted); font-size: .9375rem; }
@@ -77,6 +79,12 @@
     .recognition .award { font-size: 1rem; }
     .recognition .year { color: var(--muted); font-size: .875rem; white-space: nowrap; }
     .recognition .award-note { display: block; color: var(--muted); font-size: .875rem; }
+    .media-list { margin: 1.5rem 0 0; padding: 0; list-style: none; }
+    .media-list li { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: .5rem 1.25rem; padding: 1.15rem 0; border-top: 1px solid var(--line); }
+    .media-title { font: 400 1.2rem/1.5 var(--serif); }
+    .media-title a { color: var(--ink); text-decoration: none; }
+    .media-title a:hover { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; }
+    .media-meta { color: var(--accent); font-size: .875rem; white-space: nowrap; }
     .site-footer { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem 2rem; padding: 1.5rem 0 2.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .875rem; }
     .site-footer p { margin: 0; }
     .site-footer .text-links { font-size: .875rem; gap: .2rem 1.15rem; }
@@ -132,6 +140,8 @@
         <ul class="nav-links">
           <li><a href="#research">Research</a></li>
           <li><a href="#selected-work">Journal Articles</a></li>
+          <li><a href="#translation">Translation &amp; Innovation</a></li>
+          <li><a href="#media">Media</a></li>
           <li><a href="#about">About</a></li>
           <li><a class="cv-link" href="assets/Kevin_Mekulu_CV.pdf" aria-label="Curriculum vitae, PDF">CV</a></li>
         </ul>
@@ -188,6 +198,7 @@
             <li>
               <article>
                 <h3 class="paper-title"><a href="https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2025.1659366/full">CharMark: Character-level Markov modeling for interpretable linguistic biomarkers of cognitive decline</a></h3>
+                <p class="paper-authors"><strong>Kevin Mekulu</strong>, Faisal Aqlan, and Hui Yang</p>
                 <p class="paper-meta">Frontiers in Digital Health · 2025</p>
                 <p class="paper-description">Character-transition models identify candidate linguistic biomarkers through interpretable properties of speech transcripts.</p>
               </article>
@@ -195,6 +206,7 @@
             <li>
               <article>
                 <h3 class="paper-title"><a href="https://www.frontiersin.org/journals/aging-neuroscience/articles/10.3389/fnagi.2025.1681124/full">Character-level linguistic biomarkers for precision assessment of cognitive decline: A symbolic recurrence approach</a></h3>
+                <p class="paper-authors"><strong>Kevin Mekulu</strong>, Faisal Aqlan, and Hui Yang</p>
                 <p class="paper-meta">Frontiers in Aging Neuroscience · 2025</p>
                 <p class="paper-description">Symbolic recurrence representations and learned embeddings expose patterns in the sequential organization of transcribed speech.</p>
               </article>
@@ -202,6 +214,7 @@
             <li>
               <article>
                 <h3 class="paper-title"><a href="https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0001552">A 60-second interpretable voice model for early dementia screening</a></h3>
+                <p class="paper-authors"><strong>Kevin Mekulu</strong>, Faisal Aqlan, and Hui Yang</p>
                 <p class="paper-meta">PLOS Digital Health · 2026</p>
                 <p class="paper-description">A sparse model combines linguistic features and interpretable semantic dimensions to identify candidate biomarkers in brief picture descriptions.</p>
               </article>
@@ -209,13 +222,31 @@
             <li>
               <article>
                 <h3 class="paper-title"><a href="https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2025.1675103/full">A transparent four-feature speech model for depression screening applicable across clinical and community settings, including assisted-living environments</a></h3>
+                <p class="paper-authors"><strong>Kevin Mekulu</strong>, Faisal Aqlan, and Hui Yang</p>
                 <p class="paper-meta">Frontiers in Digital Health · 2026</p>
                 <p class="paper-description">A four-feature model combines affective, syntactic, and semantic information to study depression-related variation in conversational transcripts.</p>
               </article>
             </li>
             <li>
               <article>
+                <h3 class="paper-title"><a href="https://doi.org/10.1177/25424823251370768">The mild cognitive impairment window for optimal Alzheimer’s disease intervention</a></h3>
+                <p class="paper-authors"><strong>Kevin Mekulu</strong>, Faisal Aqlan, and Hui Yang</p>
+                <p class="paper-meta">Journal of Alzheimer’s Disease Reports · 2025 · Commentary</p>
+                <p class="paper-description">This commentary positions mild cognitive impairment as the critical intervention window and outlines translational strategies for closing delays in detection.</p>
+              </article>
+            </li>
+            <li>
+              <article>
+                <h3 class="paper-title"><a href="https://doi.org/10.1177/25424823251395310">Reimagining dementia screening: A stakeholder-informed perspective on artificial intelligence, digital biomarkers, and real-world implementation</a></h3>
+                <p class="paper-authors"><strong>Kevin Mekulu</strong>, Faisal Aqlan, and Hui Yang</p>
+                <p class="paper-meta">Journal of Alzheimer’s Disease Reports · 2025 · Commentary</p>
+                <p class="paper-description">Insights from more than 180 stakeholder interviews identify workflow barriers and implementation pathways for AI and digital biomarkers in real-world dementia screening.</p>
+              </article>
+            </li>
+            <li>
+              <article>
                 <h3 class="paper-title"><a href="https://doi.org/10.1177/25424823251407989">Agentic artificial intelligence in cognitive screening: A translational roadmap for dementia care</a></h3>
+                <p class="paper-authors"><strong>Kevin Mekulu</strong>, Faisal Aqlan, and Hui Yang</p>
                 <p class="paper-meta">Journal of Alzheimer’s Disease Reports · 2025 · Commentary</p>
                 <p class="paper-description">The Cognitive Agent Lab proposes a clinician-guided, multi-agent architecture for adaptive and transparent cognitive screening.</p>
               </article>
@@ -223,6 +254,7 @@
             <li>
               <article>
                 <h3 class="paper-title"><a href="https://alz-journals.onlinelibrary.wiley.com/doi/10.1002/trc2.70299">Agentic neurotechnology: A multi-agent AI framework for next-generation dementia care</a></h3>
+                <p class="paper-authors"><strong>Kevin Mekulu</strong>, Faisal Aqlan, and Hui Yang</p>
                 <p class="paper-meta">Alzheimer’s &amp; Dementia: Translational Research &amp; Clinical Interventions · 2026 · Perspective</p>
                 <p class="paper-description">A proposed systems framework connects behavioral sensing, interpretation, and longitudinal modeling through coordinated AI agents.</p>
               </article>
@@ -233,10 +265,35 @@
       </section>
 
       <section class="section" id="translation" aria-labelledby="translation-heading">
-        <h2 id="translation-heading">Translation</h2>
+        <h2 id="translation-heading">Translation &amp; Innovation</h2>
         <div class="section-content">
           <p>I founded <a href="https://www.dementianalytics.com/">DementiAnalytics</a> to move speech-based biomarker research toward practical measurement technologies. With clinical and engineering collaborators, I lead ongoing, IRB-approved prospective data collection involving 45 residents and 180+ recordings, with five senior-living communities enrolled. Longitudinal reassessment is planned to study within-person change. My work has also led to patent applications and an awarded NSF I-Corps project supporting stakeholder discovery.</p>
           <p class="study-date">Study figures updated September 2026.</p>
+        </div>
+      </section>
+
+      <section class="section" id="media" aria-labelledby="media-heading">
+        <h2 id="media-heading">Media</h2>
+        <div class="section-content">
+          <p>Selected coverage of my research, DementiAnalytics, and the translation of AI-enabled cognitive health technologies.</p>
+          <ul class="media-list">
+            <li>
+              <span class="media-title"><a href="https://www.psu.edu/news/research/story/qa-can-ai-understand-human-brain-better-humans">Q&amp;A: Can AI understand the human brain better than humans?</a></span>
+              <span class="media-meta">Penn State News · 2026</span>
+            </li>
+            <li>
+              <span class="media-title"><a href="https://www.forbes.com/profile/kevin-mekulu/?list=30under30-healthcare/">Forbes 30 Under 30: Healthcare</a></span>
+              <span class="media-meta">Forbes · 2025</span>
+            </li>
+            <li>
+              <span class="media-title"><a href="https://invent.psu.edu/stories/penn-state-research-based-startup-works-to-improve-dementia-screening-process/">Penn State research-based startup works to improve dementia screening process</a></span>
+              <span class="media-meta">Invent Penn State · 2024</span>
+            </li>
+            <li>
+              <span class="media-title"><a href="https://www.mcknightsseniorliving.com/news/researcher-eyes-assisted-living-as-base-for-testing-ai-powered-dementia-screening-technology/">Researcher eyes assisted living as base for testing AI-powered dementia screening technology</a></span>
+              <span class="media-meta">McKnight’s Senior Living · 2024</span>
+            </li>
+          </ul>
         </div>
       </section>
 
