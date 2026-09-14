@@ -11,6 +11,7 @@
   <meta property="og:description" content="Quantitative methods for human behavior. Interpretable measures of cognition and health.">
   <meta name="theme-color" content="#fbfcfd">
   <title>Kevin Mekulu | Penn State</title>
+  <script>document.documentElement.classList.add('js');</script>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%2324486a'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='white'%3EK%3C/text%3E%3C/svg%3E">
   <style>
     :root {
@@ -37,6 +38,17 @@
     .skip-link:focus { top: .75rem; }
     .site-header { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: 2rem 0 1.25rem; border-bottom: 1px solid var(--line); }
     .wordmark { color: var(--ink); font: 1.2rem/1 var(--serif); letter-spacing: .035em; text-decoration: none; }
+    .nav-toggle { display: none; width: 2.75rem; height: 2.75rem; padding: .7rem; border: 0; border-radius: 50%; background: transparent; color: var(--ink); cursor: pointer; }
+    .nav-toggle:hover { background: #f0f3f5; }
+    .nav-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .nav-toggle-lines, .nav-toggle-lines::before, .nav-toggle-lines::after { display: block; width: 1.3rem; height: 1.5px; background: currentColor; transition: transform .18s ease, opacity .18s ease; }
+    .nav-toggle-lines { position: relative; margin: auto; }
+    .nav-toggle-lines::before, .nav-toggle-lines::after { content: ""; position: absolute; left: 0; }
+    .nav-toggle-lines::before { transform: translateY(-.4rem); }
+    .nav-toggle-lines::after { transform: translateY(.4rem); }
+    .site-header.nav-open .nav-toggle-lines { background: transparent; }
+    .site-header.nav-open .nav-toggle-lines::before { transform: rotate(45deg); }
+    .site-header.nav-open .nav-toggle-lines::after { transform: rotate(-45deg); }
     .nav-links { display: flex; gap: 1.75rem; flex-wrap: wrap; margin: 0; padding: 0; list-style: none; }
     .nav-links a { display: inline-flex; align-items: center; min-height: 2.75rem; color: var(--muted); font-size: .875rem; text-decoration: none; }
     .nav-links a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: .35em; }
@@ -105,11 +117,19 @@
       .hero { padding: 4.25rem 0; }
       .site-footer { flex-wrap: wrap; }
     }
+    @media (max-width: 640px) {
+      .site-header { position: relative; align-items: center; }
+      .js .nav-toggle { display: inline-flex; }
+      .js .site-header nav { display: none; position: absolute; z-index: 5; top: 100%; left: 0; right: 0; padding: .6rem 0 .9rem; border-bottom: 1px solid var(--line); background: var(--paper); }
+      .js .site-header.nav-open nav { display: block; }
+      .nav-links { flex-direction: column; align-items: stretch; gap: 0; }
+      .nav-links a { width: 100%; min-height: 3rem; }
+    }
     @media (max-width: 560px) {
       .page { width: calc(100% - 2.5rem); }
       .site-header { align-items: flex-start; gap: 1rem; padding-top: 1.25rem; padding-bottom: .85rem; }
-      .wordmark { margin-top: .65rem; }
-      .nav-links { gap: 0 1rem; justify-content: flex-end; }
+      .wordmark { margin-top: 0; }
+      .nav-links { gap: 0; justify-content: flex-start; }
       .nav-links a { font-size: .875rem; }
       .hero { padding: 3.25rem 0; }
       h1 { font-size: clamp(2.7rem, 11.5vw, 3.4rem); }
@@ -146,7 +166,10 @@
   <div class="page">
     <header class="site-header">
       <a class="wordmark" href="#main" aria-label="Kevin Mekulu, home">KM</a>
-      <nav aria-label="Main navigation">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">
+        <span class="nav-toggle-lines" aria-hidden="true"></span>
+      </button>
+      <nav id="primary-navigation" aria-label="Main navigation">
         <ul class="nav-links">
           <li><a href="#research">Research</a></li>
           <li><a href="#selected-work">Publications</a></li>
@@ -363,5 +386,34 @@
       </div>
     </footer>
   </div>
+  <script>
+    const header = document.querySelector('.site-header');
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('#primary-navigation');
+
+    function closeNavigation() {
+      header.classList.remove('nav-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Open navigation');
+    }
+
+    navToggle.addEventListener('click', () => {
+      const isOpen = header.classList.toggle('nav-open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+      navToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+    });
+
+    nav.addEventListener('click', event => {
+      if (event.target.closest('a')) closeNavigation();
+    });
+
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') closeNavigation();
+    });
+
+    window.matchMedia('(min-width: 641px)').addEventListener('change', event => {
+      if (event.matches) closeNavigation();
+    });
+  </script>
 </body>
 </html>
