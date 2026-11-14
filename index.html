@@ -142,6 +142,11 @@
     .media-intro { margin-bottom: 1.8rem; }
 
     .about-sub { margin-top: 2.6rem; }
+    .about-sub.first { margin-top: 2.2rem; }
+    .teach-notes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem; margin-top: 2.4rem; }
+    .teach-notes p { font-size: .95rem; line-height: 1.65; }
+    .teach-notes .proposed { margin-top: .8rem; color: var(--muted); }
+    .teach-notes .proposed em { color: var(--ink); font-family: var(--serif); font-size: 1.05rem; }
     .about-side h2 { margin: 0; font: 400 1.6rem/1.2 var(--serif); font-variation-settings: "opsz" 32; letter-spacing: -.01em; }
     .portrait { display: block; width: 100%; max-width: 13rem; height: auto; margin-top: 1.75rem; border-radius: 2px; filter: saturate(.85); }
 
@@ -154,6 +159,7 @@
       .themes { grid-template-columns: 1fr; gap: 1.6rem; }
       .directions { grid-template-columns: 1fr; gap: 2rem; }
       .portrait { max-width: 10rem; margin-top: 1.25rem; }
+      .teach-notes { grid-template-columns: 1fr; gap: 1.75rem; }
       .figures { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 1.75rem; }
     }
     @media (max-width: 760px) {
@@ -205,6 +211,8 @@
         <ul class="nav-links">
           <li><a href="#research">Research</a></li>
           <li><a href="#publications">Publications</a></li>
+          <li><a href="#talks">Talks</a></li>
+          <li><a href="#teaching">Teaching</a></li>
           <li><a href="#translation">Innovation</a></li>
           <li><a href="#funding">Funding</a></li>
           <li><a href="#media">Media</a></li>
@@ -371,6 +379,73 @@
         </div>
       </section>
 
+      <section class="section" id="talks" aria-labelledby="talks-heading">
+        <h2 id="talks-heading">Talks</h2>
+        <div class="section-content">
+          <ul class="ledger">
+            <li>
+              <span class="ledger-title">Automated detection of early-stage dementia using large language models</span>
+              <span class="ledger-when">2025</span>
+              <p class="ledger-detail">Alzheimer’s Association International Conference (AAIC)</p>
+            </li>
+            <li>
+              <span class="ledger-title">Character-level linguistic biomarkers for precision assessment of cognitive decline</span>
+              <span class="ledger-when">2025</span>
+              <p class="ledger-detail">IEEE International Conference on Biomedical and Health Informatics (BHI)</p>
+            </li>
+            <li>
+              <span class="ledger-title">The cure is timing: How AI voice biomarkers open the treatment window in Alzheimer’s</span>
+              <span class="ledger-when">2025</span>
+              <p class="ledger-detail">Penn State Center for Socially Responsible AI</p>
+            </li>
+            <li>
+              <span class="ledger-title">A novel AI-driven Markov chain approach to dementia detection</span>
+              <span class="ledger-when">2025</span>
+              <p class="ledger-detail">IISE Annual Conference, Atlanta, GA</p>
+            </li>
+            <li>
+              <span class="ledger-title">AI and dementia diagnosis: Insights from linguistic patterns</span>
+              <span class="ledger-when">2024</span>
+              <p class="ledger-detail">IISE Annual Conference, Montreal, Canada</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="teaching" aria-labelledby="teaching-heading">
+        <h2 id="teaching-heading">Teaching</h2>
+        <div class="section-content">
+          <ul class="ledger">
+            <li>
+              <span class="ledger-title">IE 453: Simulation Modeling for Decision Support</span>
+              <span class="ledger-when">Fall 2021</span>
+              <p class="ledger-detail">Teaching Assistant, Penn State</p>
+            </li>
+            <li>
+              <span class="ledger-title">IE 330: Engineering Analytics</span>
+              <span class="ledger-when">Spring 2021</span>
+              <p class="ledger-detail">Teaching Assistant, Penn State</p>
+            </li>
+            <li>
+              <span class="ledger-title">ACMS 30440: Probability and Statistics</span>
+              <span class="ledger-when">Fall 2017</span>
+              <p class="ledger-detail">Co-Instructor, University of Notre Dame</p>
+            </li>
+          </ul>
+          <div class="teach-notes">
+            <div>
+              <h3>Mentoring</h3>
+              <p>I mentor 12+ undergraduate researchers across engineering, computer science, neuroscience, and health sciences.</p>
+            </div>
+            <div>
+              <h3>Teaching interests</h3>
+              <p>Probability and statistics, stochastic processes and simulation, engineering data analytics, time-series analysis, interpretable machine learning, and healthcare systems engineering.</p>
+              <p class="proposed">Proposed graduate elective: <em>Behavioral Measurement and Interpretable AI for Human Systems</em></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="section" id="translation" aria-labelledby="translation-heading">
         <h2 id="translation-heading">Innovation</h2>
         <div class="section-content">
@@ -440,11 +515,7 @@
         </div>
         <div class="section-content">
           <p>I am completing my Ph.D. in Industrial Engineering at Penn State, advised by Hui Yang, with graduation expected in May 2027. I previously earned an M.S. in Applied Computational Mathematics and Statistics at the University of Notre Dame and a B.S. in Applied Mathematics with honors (cum laude) from Virginia Tech, where I was also an NCAA Division I athlete. I previously worked in quantitative finance and capital markets. I bring systems engineering to questions long held by speech-language pathology and neuropsychology, and much of my work is built side by side with collaborators in those fields.</p>
-          <div class="about-sub">
-            <h3>Teaching and mentoring</h3>
-            <p>I have co-taught probability and statistics and supported courses in simulation and engineering analytics. I mentor undergraduate researchers across engineering, computer science, neuroscience, and health sciences. My teaching interests also include time-series analysis, computational modeling, and machine learning.</p>
-          </div>
-          <div class="about-sub">
+          <div class="about-sub first">
             <h3>Selected recognition</h3>
             <ul class="ledger compact">
               <li><span class="ledger-title">Leighton Riess Graduate Fellowship in Engineering</span><span class="ledger-when">2026</span></li>
