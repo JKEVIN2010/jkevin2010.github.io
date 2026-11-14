@@ -7,41 +7,50 @@
   <meta name="description" content="Kevin Mekulu is a Ph.D. candidate in Industrial Engineering at Penn State, developing quantitative methods for human behavior and interpretable measures of cognition and health.">
   <meta name="author" content="Kevin Mekulu">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Kevin Mekulu | Penn State">
+  <meta property="og:title" content="Kevin Mekulu, Penn State">
   <meta property="og:description" content="Quantitative methods for human behavior. Interpretable measures of cognition and health.">
-  <meta name="theme-color" content="#fbfcfd">
-  <title>Kevin Mekulu | Penn State</title>
+  <meta name="theme-color" content="#f3f5f4">
+  <title>Kevin Mekulu, Penn State</title>
   <script>document.documentElement.classList.add('js');</script>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%2324486a'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='white'%3EK%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23121a21'/%3E%3Cg fill='%23f3f5f4'%3E%3Crect x='14' y='14' width='6' height='6'/%3E%3Crect x='22' y='22' width='6' height='6'/%3E%3Crect x='30' y='30' width='6' height='6'/%3E%3Crect x='38' y='38' width='6' height='6'/%3E%3Crect x='46' y='46' width='6' height='6'/%3E%3Crect x='38' y='14' width='6' height='6'/%3E%3Crect x='14' y='38' width='6' height='6'/%3E%3C/g%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --paper: #fbfcfd;
-      --ink: #20262c;
-      --body: #38434c;
-      --muted: #596772;
-      --accent: #24486a;
-      --line: #dce2e7;
-      --serif: Georgia, "Times New Roman", serif;
-      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --paper: #f3f5f4;
+      --paper-raised: #fbfcfb;
+      --ink: #121a21;
+      --body: #35414b;
+      --muted: #66737d;
+      --rule: #d3dadc;
+      --accent: #1d3f73;
+      --serif: "Newsreader", Georgia, "Times New Roman", serif;
+      --sans: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      --measure: 40rem;
     }
     * { box-sizing: border-box; }
-    html { scroll-padding-top: 2rem; }
-    body { margin: 0; background: var(--paper); color: var(--body); font: 1.0625rem/1.75 var(--sans); -webkit-font-smoothing: antialiased; }
-    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: .22em; }
-    a:hover { text-decoration-thickness: 2px; }
-    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-radius: 1px; }
-    a, p, h1, h2, h3 { overflow-wrap: break-word; }
-    p { margin: 0 0 1.25rem; }
+    html { scroll-padding-top: 1.5rem; }
+    body { margin: 0; background: var(--paper); color: var(--body); font: 400 1.0625rem/1.7 var(--sans); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: .22em; text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent); }
+    a:hover { text-decoration-color: currentColor; }
+    a:focus-visible, button:focus-visible, canvas:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 2px; }
+    p, h1, h2, h3, a { overflow-wrap: break-word; }
+    p { margin: 0 0 1.2rem; }
     p:last-child { margin-bottom: 0; }
-    .page { width: min(100% - 5rem, 66rem); margin-inline: auto; }
-    .skip-link { position: absolute; left: 1rem; top: -6rem; padding: .6rem 1rem; background: var(--paper); z-index: 10; }
+    h1, h2, h3 { font-weight: 400; color: var(--ink); }
+    .page { width: min(100% - 5rem, 72rem); margin-inline: auto; }
+    .skip-link { position: absolute; left: 1rem; top: -6rem; padding: .6rem 1rem; background: var(--paper-raised); z-index: 10; }
     .skip-link:focus { top: .75rem; }
-    .site-header { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: 2rem 0 1.25rem; border-bottom: 1px solid var(--line); }
-    .wordmark { color: var(--ink); font: 1.2rem/1 var(--serif); letter-spacing: .035em; text-decoration: none; }
+
+    /* Header */
+    .site-header { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: 1.6rem 0; }
+    .wordmark { color: var(--ink); font: 500 1.05rem/1 var(--serif); text-decoration: none; letter-spacing: .01em; }
+    .nav-links { display: flex; gap: 1.9rem; flex-wrap: wrap; margin: 0; padding: 0; list-style: none; }
+    .nav-links a { display: inline-flex; align-items: center; min-height: 2.75rem; color: var(--muted); font-size: .9rem; text-decoration: none; }
+    .nav-links a:hover { color: var(--ink); }
     .nav-toggle { display: none; width: 2.75rem; height: 2.75rem; padding: .7rem; border: 0; border-radius: 50%; background: transparent; color: var(--ink); cursor: pointer; }
-    .nav-toggle:hover { background: #f0f3f5; }
-    .nav-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-    .nav-toggle-lines, .nav-toggle-lines::before, .nav-toggle-lines::after { display: block; width: 1.3rem; height: 1.5px; background: currentColor; transition: transform .18s ease, opacity .18s ease; }
+    .nav-toggle-lines, .nav-toggle-lines::before, .nav-toggle-lines::after { display: block; width: 1.3rem; height: 1.5px; background: currentColor; transition: transform .18s ease; }
     .nav-toggle-lines { position: relative; margin: auto; }
     .nav-toggle-lines::before, .nav-toggle-lines::after { content: ""; position: absolute; left: 0; }
     .nav-toggle-lines::before { transform: translateY(-.4rem); }
@@ -49,114 +58,132 @@
     .site-header.nav-open .nav-toggle-lines { background: transparent; }
     .site-header.nav-open .nav-toggle-lines::before { transform: rotate(45deg); }
     .site-header.nav-open .nav-toggle-lines::after { transform: rotate(-45deg); }
-    .nav-links { display: flex; gap: 1.75rem; flex-wrap: wrap; margin: 0; padding: 0; list-style: none; }
-    .nav-links a { display: inline-flex; align-items: center; min-height: 2.75rem; color: var(--muted); font-size: .875rem; text-decoration: none; }
-    .nav-links a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: .35em; }
-    .hero { padding: 5.5rem 0 5rem; }
-    h1 { margin: 0 0 .95rem; color: var(--ink); font: 400 clamp(3rem, 5vw, 4.25rem)/1.08 var(--serif); letter-spacing: -.045em; }
-    .affiliation { color: var(--muted); font-size: .9375rem; margin-bottom: 2.35rem; }
-    .hero-statement { max-width: 57rem; margin-bottom: 1.65rem; color: var(--ink); font: 400 clamp(1.65rem, 2.5vw, 2.25rem)/1.45 var(--serif); letter-spacing: -.017em; text-wrap: pretty; }
-    .text-links { display: flex; align-items: center; flex-wrap: wrap; gap: .2rem 1.3rem; font-size: .9375rem; }
+
+    /* Hero */
+    .hero { display: grid; grid-template-columns: minmax(0, 1fr) 23rem; gap: 4.5rem; align-items: end; padding: 5.5rem 0 5rem; border-bottom: 1px solid var(--rule); }
+    h1 { margin: 0 0 1.1rem; font: 300 clamp(3.4rem, 7.4vw, 6.4rem)/.96 var(--serif); font-variation-settings: "opsz" 72; letter-spacing: -.035em; }
+    .affiliation { margin-bottom: 2.6rem; color: var(--muted); font-size: 1rem; }
+    .hero-statement { max-width: 34ch; margin-bottom: 2.4rem; color: var(--ink); font: 400 clamp(1.55rem, 2.4vw, 2.05rem)/1.36 var(--serif); font-variation-settings: "opsz" 36; letter-spacing: -.012em; text-wrap: pretty; }
+    .hero-statement .ch { transition: background-color .12s ease, color .12s ease; border-radius: 2px; }
+    .hero-statement .ch.on { background: var(--accent); color: var(--paper-raised); }
+    .text-links { display: flex; align-items: center; flex-wrap: wrap; gap: .2rem 1.6rem; font-size: .95rem; }
     .text-links a { min-height: 2.75rem; display: inline-flex; align-items: center; }
-    .section { display: grid; grid-template-columns: 11.5rem minmax(0, 1fr); column-gap: 3.25rem; padding: 3.75rem 0 4rem; border-top: 1px solid var(--line); }
-    .section > h2 { margin: .2rem 0 0; color: var(--accent); font-size: .875rem; font-weight: 650; line-height: 1.65; letter-spacing: .105em; text-transform: uppercase; }
-    .section-content { min-width: 0; }
-    .research-intro { font-size: 1.125rem; line-height: 1.75; }
-    .pipeline { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); column-gap: 1.5rem; margin: 2.25rem 0 2.75rem; padding: 0; list-style: none; }
-    .pipeline li { position: relative; }
-    .pipeline li:not(:last-child)::after { content: "→"; position: absolute; top: -.06rem; right: -1.2rem; color: var(--muted); font-size: .95rem; }
-    .pipeline strong { display: block; margin-bottom: .5rem; color: var(--accent); font-size: .9375rem; font-weight: 600; line-height: 1.5; }
-    .pipeline span { display: block; font-size: .875rem; line-height: 1.6; color: var(--muted); }
-    .research-theme { margin-top: 1.8rem; }
-    h3 { color: var(--ink); font-size: 1rem; font-weight: 650; line-height: 1.55; margin: 0 0 .5rem; }
-    .current-directions { margin-top: 2rem; }
+    .cv-link { font-weight: 600; }
+
+    .plot { margin: 0; }
+    .plot-frame { position: relative; aspect-ratio: 1; background: var(--paper-raised); border: 1px solid var(--rule); }
+    .plot canvas { display: block; width: 100%; height: 100%; cursor: crosshair; touch-action: none; }
+    .plot figcaption { margin-top: .9rem; color: var(--muted); font-size: .8125rem; line-height: 1.55; }
+    .plot-readout { display: block; min-height: 1.3rem; margin-top: .35rem; color: var(--ink); font-variant-numeric: tabular-nums; }
+
+    /* Sections */
+    .section { display: grid; grid-template-columns: 13rem minmax(0, 1fr); column-gap: 4rem; padding: 4.25rem 0 4.5rem; border-bottom: 1px solid var(--rule); }
+    .section:last-of-type { border-bottom: 0; }
+    .section > h2 { margin: 0; font: 400 1.6rem/1.2 var(--serif); font-variation-settings: "opsz" 32; letter-spacing: -.01em; }
+    .section-content { min-width: 0; max-width: 46rem; }
+    .lede { color: var(--ink); font: 400 1.3rem/1.55 var(--serif); font-variation-settings: "opsz" 20; }
+
+    /* Research chain: the five stages read as states in a chain */
+    .chain { position: relative; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); column-gap: 1.25rem; margin: 2.6rem 0 3rem; padding: 0; list-style: none; }
+    .chain::before { content: ""; position: absolute; top: .45rem; left: .45rem; right: calc(20% - .45rem); height: 1px; background: var(--ink); }
+    .chain li { position: relative; padding-top: 1.75rem; }
+    .chain li::before { content: ""; position: absolute; top: 0; left: 0; width: .9rem; height: .9rem; border: 1px solid var(--ink); border-radius: 50%; background: var(--paper); }
+    .chain li:last-child::before { background: var(--ink); }
+    .chain strong { display: block; margin-bottom: .3rem; color: var(--ink); font: 500 1.05rem/1.35 var(--serif); }
+    .chain span { display: block; color: var(--muted); font-size: .85rem; line-height: 1.5; }
+
+    .themes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; margin-bottom: 2.75rem; }
+    h3 { margin: 0 0 .5rem; font: 500 1.15rem/1.35 var(--serif); }
+    .themes p { font-size: .95rem; line-height: 1.65; }
+    .directions { padding: 1.6rem 1.75rem; background: var(--paper-raised); border-left: 2px solid var(--accent); }
+    .directions p { font-size: .98rem; }
+
+    /* Publications */
+    .pub-group + .pub-group { margin-top: 3rem; }
+    .pub-group > h3 { margin-bottom: 1rem; color: var(--muted); font: 400 1rem/1.4 var(--sans); }
     .publications { margin: 0; padding: 0; list-style: none; }
-    .publications li { padding: 1.65rem 0 1.8rem; border-top: 1px solid var(--line); }
-    .publications li:first-child { padding-top: 0; border-top: 0; }
-    .paper-title { font: 400 1.4rem/1.45 var(--serif); margin-bottom: .65rem; letter-spacing: -.012em; }
+    .publications li { display: grid; grid-template-columns: 3.5rem minmax(0, 1fr); gap: 1.25rem; padding: 1.5rem 0; border-top: 1px solid var(--rule); }
+    .pub-year { color: var(--muted); font-size: .875rem; font-variant-numeric: tabular-nums; padding-top: .3rem; }
+    .paper-title { margin: 0 0 .5rem; font: 400 1.35rem/1.38 var(--serif); font-variation-settings: "opsz" 24; letter-spacing: -.008em; text-wrap: pretty; }
     .paper-title a { color: var(--ink); text-decoration: none; }
-    .paper-title a:hover { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; }
-    .paper-authors { color: var(--muted); font-size: .9375rem; line-height: 1.6; margin-bottom: .35rem; }
-    .paper-authors strong { color: var(--ink); font-weight: 650; }
-    .paper-meta { color: var(--accent); font-size: .875rem; line-height: 1.6; margin-bottom: .65rem; }
-    .paper-meta .code-link { color: inherit; font-weight: 650; }
-    .paper-description { font-size: 1rem; line-height: 1.7; }
-    .full-record { border-top: 1px solid var(--line); padding-top: 1.3rem; display: flex; align-items: center; flex-wrap: wrap; column-gap: 1.2rem; color: var(--muted); font-size: .9375rem; }
+    .paper-title a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: var(--rule); }
+    .paper-authors { margin-bottom: .2rem; color: var(--muted); font-size: .9rem; line-height: 1.55; }
+    .paper-authors strong { color: var(--ink); font-weight: 600; }
+    .paper-meta { display: flex; flex-wrap: wrap; gap: .15rem 1.1rem; margin-bottom: .6rem; font-size: .9rem; line-height: 1.55; }
+    .paper-meta .venue { color: var(--ink); font-family: var(--serif); font-style: italic; font-size: 1rem; }
+    .paper-meta .kind { color: var(--muted); }
+    .paper-meta a { font-weight: 600; }
+    .paper-description { font-size: .95rem; line-height: 1.65; max-width: var(--measure); }
+    .full-record { display: flex; align-items: center; flex-wrap: wrap; column-gap: 1.4rem; margin-top: 2rem; color: var(--muted); font-size: .95rem; }
     .full-record a { display: inline-flex; align-items: center; min-height: 2.75rem; }
-    .study-date { margin-top: 1.2rem; color: var(--muted); font-size: .875rem; }
-    .funding-list { margin: 0; padding: 0; list-style: none; }
-    .funding-list li { padding: 1.35rem 0 1.5rem; border-top: 1px solid var(--line); }
-    .funding-list li:first-child { padding-top: 0; border-top: 0; }
-    .funding-title { color: var(--ink); font: 400 1.25rem/1.5 var(--serif); margin-bottom: .35rem; }
-    .funding-title a { color: inherit; text-decoration: none; }
-    .funding-title a:hover { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; }
-    .funding-meta { color: var(--accent); font-size: .875rem; line-height: 1.6; margin-bottom: .35rem; }
-    .funding-project { color: var(--muted); font: italic 1rem/1.6 var(--serif); margin-bottom: .4rem; }
-    .funding-description { font-size: .9375rem; line-height: 1.65; }
-    .funding-description strong { color: var(--ink); font-weight: 650; }
-    .about-subsection { margin-top: 2rem; }
-    .recognition { padding: 0; margin: .75rem 0 0; list-style: none; }
-    .recognition li { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: .5rem 1rem; padding: .55rem 0; border-bottom: 1px solid var(--line); }
-    .recognition li:last-child { border-bottom: 0; }
-    .recognition .award { font-size: 1rem; }
-    .recognition .year { color: var(--muted); font-size: .875rem; white-space: nowrap; }
-    .recognition .award-note { display: block; color: var(--muted); font-size: .875rem; }
-    .media-list { margin: 1.5rem 0 0; padding: 0; list-style: none; }
-    .media-list li { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: .5rem 1.25rem; padding: 1.15rem 0; border-top: 1px solid var(--line); }
-    .media-title { font: 400 1.2rem/1.5 var(--serif); }
-    .media-title a { color: var(--ink); text-decoration: none; }
-    .media-title a:hover { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; }
-    .media-meta { color: var(--accent); font-size: .875rem; white-space: nowrap; }
-    .site-footer { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem 2rem; padding: 1.5rem 0 2.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .875rem; }
+
+    /* Innovation */
+    .figures { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; margin: 2.4rem 0 1rem; padding: 1.5rem 0 0; border-top: 1px solid var(--rule); }
+    .figures div { display: flex; flex-direction: column; }
+    .figures dt { order: 2; color: var(--muted); font-size: .85rem; line-height: 1.45; }
+    .figures dd { order: 1; margin: 0 0 .35rem; color: var(--ink); font: 300 2.6rem/1 var(--serif); font-variation-settings: "opsz" 60; font-variant-numeric: lining-nums; }
+    .study-date { color: var(--muted); font-size: .85rem; }
+
+    /* Funding, media, recognition */
+    .ledger { margin: 0; padding: 0; list-style: none; }
+    .ledger > li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .25rem 2rem; align-items: baseline; padding: 1.25rem 0; border-top: 1px solid var(--rule); }
+    .ledger > li:last-child { border-bottom: 1px solid var(--rule); }
+    .ledger-title { color: var(--ink); font: 400 1.2rem/1.45 var(--serif); font-variation-settings: "opsz" 20; }
+    .ledger-title a { color: inherit; text-decoration: none; }
+    .ledger-title a:hover { text-decoration: underline; text-decoration-color: var(--rule); }
+    .ledger-when { color: var(--muted); font-size: .875rem; white-space: nowrap; font-variant-numeric: tabular-nums; }
+    .ledger-detail { grid-column: 1 / -1; color: var(--body); font-size: .925rem; line-height: 1.6; }
+    .ledger-detail em { font-family: var(--serif); font-size: 1.02rem; }
+    .ledger-detail strong { color: var(--ink); font-weight: 600; }
+    .ledger .amount { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+    .ledger.compact .ledger-title { font-size: 1.08rem; }
+    .ledger.compact > li { padding: .9rem 0; }
+    .media-intro { margin-bottom: 1.8rem; }
+
+    .about-sub { margin-top: 2.6rem; }
+
+    .site-footer { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 1rem 2rem; padding: 2rem 0 3rem; border-top: 1px solid var(--ink); color: var(--muted); font-size: .9rem; }
     .site-footer p { margin: 0; }
-    .site-footer .text-links { font-size: .875rem; gap: .2rem 1.15rem; }
-    @media (max-width: 850px) {
-      .page { width: min(100% - 3rem, 66rem); }
-      .section { grid-template-columns: 1fr; gap: 1.5rem; }
-      .section > h2 { margin: 0; }
-      .hero { padding: 4.25rem 0; }
-      .site-footer { flex-wrap: wrap; }
+
+    @media (max-width: 960px) {
+      .hero { grid-template-columns: minmax(0, 1fr) 17rem; gap: 3rem; }
+      .section { grid-template-columns: 1fr; row-gap: 1.6rem; }
+      .themes { grid-template-columns: 1fr; gap: 1.6rem; }
+      .figures { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 1.75rem; }
     }
-    @media (max-width: 640px) {
-      .site-header { position: relative; align-items: center; }
+    @media (max-width: 760px) {
+      .page { width: min(100% - 3rem, 72rem); }
+      .hero { grid-template-columns: 1fr; padding: 3.75rem 0 3.5rem; gap: 2.75rem; }
+      .plot { max-width: 21rem; }
+      .chain { grid-template-columns: 1fr; row-gap: 1.3rem; margin: 2rem 0 2.5rem; }
+      .chain::before { top: .45rem; bottom: 1.2rem; left: .45rem; right: auto; width: 1px; height: auto; }
+      .chain li { padding: 0 0 0 2rem; }
       .js .nav-toggle { display: inline-flex; }
-      .js .site-header nav { display: none; position: absolute; z-index: 5; top: 100%; left: 0; right: 0; padding: .6rem 0 .9rem; border-bottom: 1px solid var(--line); background: var(--paper); }
+      .site-header { position: relative; }
+      .js .site-header nav { display: none; position: absolute; z-index: 5; top: 100%; left: 0; right: 0; padding: .5rem 0 1rem; border-bottom: 1px solid var(--rule); background: var(--paper); }
       .js .site-header.nav-open nav { display: block; }
-      .nav-links { flex-direction: column; align-items: stretch; gap: 0; }
-      .nav-links a { width: 100%; min-height: 3rem; }
+      .nav-links { flex-direction: column; gap: 0; }
     }
-    @media (max-width: 560px) {
+    @media (max-width: 520px) {
       .page { width: calc(100% - 2.5rem); }
-      .site-header { align-items: flex-start; gap: 1rem; padding-top: 1.25rem; padding-bottom: .85rem; }
-      .wordmark { margin-top: 0; }
-      .nav-links { gap: 0; justify-content: flex-start; }
-      .nav-links a { font-size: .875rem; }
-      .hero { padding: 3.25rem 0; }
-      h1 { font-size: clamp(2.7rem, 11.5vw, 3.4rem); }
-      .affiliation { max-width: 22rem; margin-bottom: 1.75rem; }
-      .affiliation .separator { display: none; }
-      .affiliation .university { display: block; }
-      .hero-statement { font-size: 1.65rem; line-height: 1.5; }
-      .section { padding: 2.65rem 0 3rem; gap: 1.35rem; }
-      .pipeline { grid-template-columns: 1fr; row-gap: 1.35rem; margin: 1.75rem 0 2.25rem; }
-      .pipeline li { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: .65rem; }
-      .pipeline strong { margin: 0; }
-      .pipeline li:not(:last-child)::after { content: "↓"; top: auto; right: auto; bottom: -1.15rem; left: .1rem; font-size: .875rem; }
-      .paper-title { font-size: 1.3rem; }
-      .recognition li { gap: .5rem .75rem; }
-      .recognition .award { font-size: .9375rem; }
+      .section { padding: 3rem 0 3.25rem; }
+      .publications li { grid-template-columns: 1fr; gap: .3rem; }
+      .pub-year { padding-top: 0; }
+      .ledger > li { grid-template-columns: 1fr; }
+      .figures dd { font-size: 2.2rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
     }
     @media print {
-      body { background: white; color: #000; font-size: 10pt; }
+      body { background: #fff; color: #000; font-size: 10pt; }
       .page { width: 100%; }
-      .site-header, .skip-link { display: none; }
-      .hero { padding: 0 0 1.5rem; }
-      h1 { font-size: 28pt; }
-      .hero-statement { font-size: 17pt; }
+      .site-header, .skip-link, .plot { display: none; }
+      .hero { display: block; padding: 0 0 1.5rem; }
+      h1 { font-size: 30pt; }
       .section { display: block; padding: 1.25rem 0; }
-      .section > h2 { margin: 0 0 1rem; }
-      .publications li, .funding-list li, .research-theme, .recognition li { break-inside: avoid; }
-      .site-footer { padding-bottom: 0; }
+      .section > h2 { margin-bottom: 1rem; }
+      .publications li, .ledger > li { break-inside: avoid; }
       a { color: inherit; }
     }
   </style>
@@ -165,142 +192,178 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="page">
     <header class="site-header">
-      <a class="wordmark" href="#main" aria-label="Kevin Mekulu, home">KM</a>
+      <a class="wordmark" href="#main" aria-label="Kevin Mekulu, home">Kevin Mekulu</a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">
         <span class="nav-toggle-lines" aria-hidden="true"></span>
       </button>
       <nav id="primary-navigation" aria-label="Main navigation">
         <ul class="nav-links">
           <li><a href="#research">Research</a></li>
-          <li><a href="#selected-work">Publications</a></li>
+          <li><a href="#publications">Publications</a></li>
           <li><a href="#translation">Innovation</a></li>
           <li><a href="#funding">Funding</a></li>
           <li><a href="#media">Media</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="assets/Kevin_Mekulu_CV.pdf">CV</a></li>
         </ul>
       </nav>
     </header>
 
     <main id="main">
       <section class="hero" aria-labelledby="name">
-        <h1 id="name">Kevin Mekulu</h1>
-        <p class="affiliation">Ph.D. Candidate in Industrial Engineering <span class="separator" aria-hidden="true">·</span> <span class="university">Penn State University</span></p>
-        <p class="hero-statement">I develop quantitative methods to uncover the structure of human behavior and build interpretable measures of cognition and health.</p>
-        <div class="text-links" aria-label="Profile links">
-          <a href="assets/Kevin_Mekulu_CV.pdf" aria-label="Curriculum vitae, PDF">CV</a>
-          <a href="https://scholar.google.com/citations?hl=en&amp;user=X3Bn4NIAAAAJ">Google Scholar</a>
-          <a href="https://www.linkedin.com/in/kevinmekulu">LinkedIn</a>
-          <a href="mailto:kxm5924@psu.edu">Email</a>
+        <div>
+          <h1 id="name">Kevin Mekulu</h1>
+          <p class="affiliation">Ph.D. Candidate in Industrial Engineering, Penn State University</p>
+          <p class="hero-statement" id="statement">I develop quantitative methods to uncover the structure of human behavior and build interpretable measures of cognition and health.</p>
+          <div class="text-links" aria-label="Profile links">
+            <a class="cv-link" href="assets/Kevin_Mekulu_CV.pdf" aria-label="Curriculum vitae, PDF">Curriculum vitae</a>
+            <a href="https://scholar.google.com/citations?hl=en&amp;user=X3Bn4NIAAAAJ">Google Scholar</a>
+            <a href="https://www.linkedin.com/in/kevinmekulu">LinkedIn</a>
+            <a href="mailto:kxm5924@psu.edu">kxm5924@psu.edu</a>
+          </div>
         </div>
+        <figure class="plot" aria-labelledby="plot-caption">
+          <div class="plot-frame">
+            <canvas id="recurrence" tabindex="0" role="img" aria-label="Symbolic recurrence plot of the research statement. A mark at row i and column j means the characters at positions i and j are the same letter."></canvas>
+          </div>
+          <figcaption id="plot-caption">
+            Symbolic recurrence plot of my research statement. Each mark pairs two positions holding the same letter, the representation behind my work on character-level speech biomarkers. Point at the plot to trace a pair.
+            <span class="plot-readout" id="readout" aria-live="polite"></span>
+          </figcaption>
+        </figure>
       </section>
 
       <section class="section" id="research" aria-labelledby="research-heading">
         <h2 id="research-heading">Research</h2>
         <div class="section-content">
-          <p class="research-intro">Speech, eye movements, physiological signals, and task performance contain patterns of timing, sequence, and organization. I study how to represent those patterns, what they reveal about human cognition, and when they support reliable measurement.</p>
-          <ol class="pipeline" aria-label="Conceptual research progression">
+          <p class="lede">Speech, eye movements, physiological signals, and task performance contain patterns of timing, sequence, and organization. I study how to represent those patterns, what they reveal about human cognition, and when they support reliable measurement.</p>
+          <ol class="chain" aria-label="Research progression, from behavior to translation">
             <li><strong>Behavior</strong><span>Speech, gaze, physiological signals, task performance</span></li>
             <li><strong>Models</strong><span>Stochastic, nonlinear, and AI methods</span></li>
             <li><strong>Discovery</strong><span>Interpretable behavioral signatures</span></li>
             <li><strong>Measurement</strong><span>Cognitive and health indicators</span></li>
             <li><strong>Translation</strong><span>Prospective studies and technology</span></li>
           </ol>
-          <div class="research-theme">
-            <h3>Behavioral dynamics</h3>
-            <p>I develop and adapt stochastic, Markov, and nonlinear representations of speech, gaze, and physiological signals. These models make transitions, recurrence, and temporal organization available for scientific investigation.</p>
+          <div class="themes">
+            <div>
+              <h3>Behavioral dynamics</h3>
+              <p>I develop and adapt stochastic, Markov, and nonlinear representations of speech, gaze, and physiological signals. These models make transitions, recurrence, and temporal organization available for scientific investigation.</p>
+            </div>
+            <div>
+              <h3>Interpretable signatures</h3>
+              <p>I combine these representations with statistical learning and AI to discover candidate biomarkers of cognitive and mental health. A central question is whether a signature reflects the individual, the task, or the way behavior was measured.</p>
+            </div>
+            <div>
+              <h3>Intelligent measurement</h3>
+              <p>I translate supported discoveries into measurement systems and evaluate their reliability in prospective human studies. My future work will develop personalized baselines and adaptive systems that choose informative measurements while making uncertainty explicit.</p>
+            </div>
           </div>
-          <div class="research-theme">
-            <h3>Interpretable signatures</h3>
-            <p>I combine these representations with statistical learning and AI to discover candidate biomarkers of cognitive and mental health. A central question is whether a signature reflects the individual, the task, or the way behavior was measured.</p>
-          </div>
-          <div class="research-theme">
-            <h3>Intelligent measurement</h3>
-            <p>I translate supported discoveries into measurement systems and evaluate their reliability in prospective human studies. My future work will develop personalized baselines and adaptive systems that choose informative measurements while making uncertainty explicit.</p>
-          </div>
-          <div class="current-directions">
+          <div class="directions">
             <h3>Current directions</h3>
             <p>Current projects examine gaze transitions in immersive virtual reality, multifractal organization of visual exploration, and the comparability of speech-timing measures across tasks. The next stage will investigate stability within individuals, complementary information across speech and gaze, and AI-guided task selection for repeated measurement.</p>
           </div>
         </div>
       </section>
 
-      <section class="section" id="selected-work" aria-labelledby="work-heading">
-        <h2 id="work-heading">Peer-reviewed journal articles</h2>
+      <section class="section" id="publications" aria-labelledby="work-heading">
+        <h2 id="work-heading">Publications</h2>
         <div class="section-content">
-          <ol class="publications">
-            <li>
-              <article>
-                <h3 class="paper-title"><a href="https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2025.1659366/full">CharMark: Character-level Markov modeling for interpretable linguistic biomarkers of cognitive decline</a></h3>
-                <p class="paper-authors"><strong>Kevin Mekulu</strong>, Faisal Aqlan, and Hui Yang</p>
-                <p class="paper-meta">Frontiers in Digital Health · 2025 · <a class="code-link" href="https://github.com/JKEVIN2010/charmark-biomarker-discovery" aria-label="Code repository for CharMark">Code</a></p>
-                <p class="paper-description">Character-transition models identify candidate linguistic biomarkers through interpretable properties of speech transcripts.</p>
-              </article>
-            </li>
-            <li>
-              <article>
-                <h3 class="paper-title"><a href="https://www.frontiersin.org/journals/aging-neuroscience/articles/10.3389/fnagi.2025.1681124/full">Character-level linguistic biomarkers for precision assessment of cognitive decline: A symbolic recurrence approach</a></h3>
-                <p class="paper-authors"><strong>Kevin Mekulu</strong>, Faisal Aqlan, and Hui Yang</p>
-                <p class="paper-meta">Frontiers in Aging Neuroscience · 2025 · <a class="code-link" href="https://github.com/JKEVIN2010/symbolic-recurrence-biomarker" aria-label="Code repository for the symbolic recurrence paper">Code</a></p>
-                <p class="paper-description">Symbolic recurrence representations and learned embeddings expose patterns in the sequential organization of transcribed speech.</p>
-              </article>
-            </li>
-            <li>
-              <article>
-                <h3 class="paper-title"><a href="https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0001552">A 60-second interpretable voice model for early dementia screening</a></h3>
-                <p class="paper-authors"><strong>Kevin Mekulu</strong>, Faisal Aqlan, and Hui Yang</p>
-                <p class="paper-meta">PLOS Digital Health · 2026</p>
-                <p class="paper-description">A sparse model combines linguistic features and interpretable semantic dimensions to identify candidate biomarkers in brief picture descriptions.</p>
-              </article>
-            </li>
-            <li>
-              <article>
-                <h3 class="paper-title"><a href="https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2025.1675103/full">A transparent four-feature speech model for depression screening applicable across clinical and community settings, including assisted-living environments</a></h3>
-                <p class="paper-authors"><strong>Kevin Mekulu</strong>, Faisal Aqlan, and Hui Yang</p>
-                <p class="paper-meta">Frontiers in Digital Health · 2026</p>
-                <p class="paper-description">A four-feature model combines affective, syntactic, and semantic information to study depression-related variation in conversational transcripts.</p>
-              </article>
-            </li>
-            <li>
-              <article>
-                <h3 class="paper-title"><a href="https://doi.org/10.1177/25424823251370768">The mild cognitive impairment window for optimal Alzheimer’s disease intervention</a></h3>
-                <p class="paper-authors"><strong>Kevin Mekulu</strong>, Faisal Aqlan, and Hui Yang</p>
-                <p class="paper-meta">Journal of Alzheimer’s Disease Reports · 2025 · Commentary</p>
-                <p class="paper-description">This commentary positions mild cognitive impairment as the critical intervention window and outlines translational strategies for closing delays in detection.</p>
-              </article>
-            </li>
-            <li>
-              <article>
-                <h3 class="paper-title"><a href="https://doi.org/10.1177/25424823251395310">Reimagining dementia screening: A stakeholder-informed perspective on artificial intelligence, digital biomarkers, and real-world implementation</a></h3>
-                <p class="paper-authors"><strong>Kevin Mekulu</strong>, Faisal Aqlan, and Hui Yang</p>
-                <p class="paper-meta">Journal of Alzheimer’s Disease Reports · 2025 · Commentary</p>
-                <p class="paper-description">Insights from more than 180 stakeholder interviews identify workflow barriers and implementation pathways for AI and digital biomarkers in real-world dementia screening.</p>
-              </article>
-            </li>
-            <li>
-              <article>
-                <h3 class="paper-title"><a href="https://doi.org/10.1177/25424823251407989">Agentic artificial intelligence in cognitive screening: A translational roadmap for dementia care</a></h3>
-                <p class="paper-authors"><strong>Kevin Mekulu</strong>, Faisal Aqlan, and Hui Yang</p>
-                <p class="paper-meta">Journal of Alzheimer’s Disease Reports · 2025 · Commentary</p>
-                <p class="paper-description">The Cognitive Agent Lab proposes a clinician-guided, multi-agent architecture for adaptive and transparent cognitive screening.</p>
-              </article>
-            </li>
-            <li>
-              <article>
-                <h3 class="paper-title"><a href="https://alz-journals.onlinelibrary.wiley.com/doi/10.1002/trc2.70299">Agentic neurotechnology: A multi-agent AI framework for next-generation dementia care</a></h3>
-                <p class="paper-authors"><strong>Kevin Mekulu</strong>, Faisal Aqlan, and Hui Yang</p>
-                <p class="paper-meta">Alzheimer’s &amp; Dementia: Translational Research &amp; Clinical Interventions · 2026 · Perspective</p>
-                <p class="paper-description">A proposed systems framework connects behavioral sensing, interpretation, and longitudinal modeling through coordinated AI agents.</p>
-              </article>
-            </li>
-          </ol>
-          <p class="full-record"><span>Full publication record</span><a href="https://scholar.google.com/citations?hl=en&amp;user=X3Bn4NIAAAAJ">Google Scholar</a><a href="assets/Kevin_Mekulu_CV.pdf" aria-label="Curriculum vitae, PDF">CV</a></p>
+          <div class="pub-group">
+            <h3>Research articles</h3>
+            <ol class="publications">
+              <li>
+                <span class="pub-year">2026</span>
+                <article>
+                  <h4 class="paper-title"><a href="https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0001552">A 60-second interpretable voice model for early dementia screening</a></h4>
+                  <p class="paper-authors"><strong>Kevin Mekulu</strong>, Faisal Aqlan, and Hui Yang</p>
+                  <p class="paper-meta"><span class="venue">PLOS Digital Health</span></p>
+                  <p class="paper-description">A sparse model combines linguistic features and interpretable semantic dimensions to identify candidate biomarkers in brief picture descriptions.</p>
+                </article>
+              </li>
+              <li>
+                <span class="pub-year">2026</span>
+                <article>
+                  <h4 class="paper-title"><a href="https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2025.1675103/full">A transparent four-feature speech model for depression screening applicable across clinical and community settings, including assisted-living environments</a></h4>
+                  <p class="paper-authors"><strong>Kevin Mekulu</strong>, Faisal Aqlan, and Hui Yang</p>
+                  <p class="paper-meta"><span class="venue">Frontiers in Digital Health</span></p>
+                  <p class="paper-description">A four-feature model combines affective, syntactic, and semantic information to study depression-related variation in conversational transcripts.</p>
+                </article>
+              </li>
+              <li>
+                <span class="pub-year">2025</span>
+                <article>
+                  <h4 class="paper-title"><a href="https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2025.1659366/full">CharMark: Character-level Markov modeling for interpretable linguistic biomarkers of cognitive decline</a></h4>
+                  <p class="paper-authors"><strong>Kevin Mekulu</strong>, Faisal Aqlan, and Hui Yang</p>
+                  <p class="paper-meta"><span class="venue">Frontiers in Digital Health</span><a href="https://github.com/JKEVIN2010/charmark-biomarker-discovery" aria-label="Code repository for CharMark">Code</a></p>
+                  <p class="paper-description">Character-transition models identify candidate linguistic biomarkers through interpretable properties of speech transcripts.</p>
+                </article>
+              </li>
+              <li>
+                <span class="pub-year">2025</span>
+                <article>
+                  <h4 class="paper-title"><a href="https://www.frontiersin.org/journals/aging-neuroscience/articles/10.3389/fnagi.2025.1681124/full">Character-level linguistic biomarkers for precision assessment of cognitive decline: A symbolic recurrence approach</a></h4>
+                  <p class="paper-authors"><strong>Kevin Mekulu</strong>, Faisal Aqlan, and Hui Yang</p>
+                  <p class="paper-meta"><span class="venue">Frontiers in Aging Neuroscience</span><a href="https://github.com/JKEVIN2010/symbolic-recurrence-biomarker" aria-label="Code repository for the symbolic recurrence paper">Code</a></p>
+                  <p class="paper-description">Symbolic recurrence representations and learned embeddings expose patterns in the sequential organization of transcribed speech.</p>
+                </article>
+              </li>
+            </ol>
+          </div>
+          <div class="pub-group">
+            <h3>Perspectives and commentaries</h3>
+            <ol class="publications">
+              <li>
+                <span class="pub-year">2026</span>
+                <article>
+                  <h4 class="paper-title"><a href="https://alz-journals.onlinelibrary.wiley.com/doi/10.1002/trc2.70299">Agentic neurotechnology: A multi-agent AI framework for next-generation dementia care</a></h4>
+                  <p class="paper-authors"><strong>Kevin Mekulu</strong>, Faisal Aqlan, and Hui Yang</p>
+                  <p class="paper-meta"><span class="venue">Alzheimer’s &amp; Dementia: Translational Research &amp; Clinical Interventions</span><span class="kind">Perspective</span></p>
+                  <p class="paper-description">A proposed systems framework connects behavioral sensing, interpretation, and longitudinal modeling through coordinated AI agents.</p>
+                </article>
+              </li>
+              <li>
+                <span class="pub-year">2025</span>
+                <article>
+                  <h4 class="paper-title"><a href="https://doi.org/10.1177/25424823251407989">Agentic artificial intelligence in cognitive screening: A translational roadmap for dementia care</a></h4>
+                  <p class="paper-authors"><strong>Kevin Mekulu</strong>, Faisal Aqlan, and Hui Yang</p>
+                  <p class="paper-meta"><span class="venue">Journal of Alzheimer’s Disease Reports</span><span class="kind">Commentary</span></p>
+                  <p class="paper-description">The Cognitive Agent Lab proposes a clinician-guided, multi-agent architecture for adaptive and transparent cognitive screening.</p>
+                </article>
+              </li>
+              <li>
+                <span class="pub-year">2025</span>
+                <article>
+                  <h4 class="paper-title"><a href="https://doi.org/10.1177/25424823251395310">Reimagining dementia screening: A stakeholder-informed perspective on artificial intelligence, digital biomarkers, and real-world implementation</a></h4>
+                  <p class="paper-authors"><strong>Kevin Mekulu</strong>, Faisal Aqlan, and Hui Yang</p>
+                  <p class="paper-meta"><span class="venue">Journal of Alzheimer’s Disease Reports</span><span class="kind">Commentary</span></p>
+                  <p class="paper-description">Insights from more than 180 stakeholder interviews identify workflow barriers and implementation pathways for AI and digital biomarkers in real-world dementia screening.</p>
+                </article>
+              </li>
+              <li>
+                <span class="pub-year">2025</span>
+                <article>
+                  <h4 class="paper-title"><a href="https://doi.org/10.1177/25424823251370768">The mild cognitive impairment window for optimal Alzheimer’s disease intervention</a></h4>
+                  <p class="paper-authors"><strong>Kevin Mekulu</strong>, Faisal Aqlan, and Hui Yang</p>
+                  <p class="paper-meta"><span class="venue">Journal of Alzheimer’s Disease Reports</span><span class="kind">Commentary</span></p>
+                  <p class="paper-description">This commentary positions mild cognitive impairment as the critical intervention window and outlines translational strategies for closing delays in detection.</p>
+                </article>
+              </li>
+            </ol>
+          </div>
+          <p class="full-record"><span>Full publication record:</span><a href="https://scholar.google.com/citations?hl=en&amp;user=X3Bn4NIAAAAJ">Google Scholar</a><a href="assets/Kevin_Mekulu_CV.pdf" aria-label="Curriculum vitae, PDF">CV</a></p>
         </div>
       </section>
 
       <section class="section" id="translation" aria-labelledby="translation-heading">
         <h2 id="translation-heading">Innovation</h2>
         <div class="section-content">
-          <p>I founded <a href="https://www.dementianalytics.com/">DementiAnalytics</a> to move speech-based biomarker research toward practical measurement technologies. With clinical and engineering collaborators, I lead ongoing, IRB-approved prospective data collection involving 49 residents and 294 recordings, with five senior-living communities enrolled. Longitudinal reassessment is planned to study within-person change. My work has also led to five patent applications spanning speech, language, and eye-tracking approaches to cognitive assessment.</p>
+          <p>I founded <a href="https://www.dementianalytics.com/">DementiAnalytics</a> to move speech-based biomarker research toward practical measurement technologies. With clinical and engineering collaborators, I lead ongoing, IRB-approved prospective data collection in senior-living communities, with longitudinal reassessment planned to study within-person change. My work has also led to patent applications spanning speech, language, and eye-tracking approaches to cognitive assessment.</p>
+          <dl class="figures">
+            <div><dt>Residents enrolled in the prospective study</dt><dd>49</dd></div>
+            <div><dt>Voice recordings collected</dt><dd>294</dd></div>
+            <div><dt>Senior-living communities enrolled</dt><dd>5</dd></div>
+            <div><dt>Patent applications</dt><dd>5</dd></div>
+          </dl>
           <p class="study-date">Study figures updated September 2026.</p>
         </div>
       </section>
@@ -308,22 +371,21 @@
       <section class="section" id="funding" aria-labelledby="funding-heading">
         <h2 id="funding-heading">Selected funding</h2>
         <div class="section-content">
-          <ul class="funding-list">
+          <ul class="ledger">
             <li>
-              <h3 class="funding-title"><a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2425827">NSF National I-Corps Teams Award</a></h3>
-              <p class="funding-meta">$50,000 · IIP-2425827 · 2024–2026</p>
-              <p class="funding-project">Artificial Intelligence for Dementia Assessment</p>
-              <p class="funding-description"><strong>Kevin Mekulu, Co-Principal Investigator and Entrepreneurial Lead</strong> · Hui Yang, Principal Investigator and Technical Lead</p>
+              <span class="ledger-title"><a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2425827">NSF National I-Corps Teams Award</a></span>
+              <span class="ledger-when">2024 to 2026</span>
+              <p class="ledger-detail"><span class="amount">$50,000</span>, IIP-2425827, <em>Artificial Intelligence for Dementia Assessment</em><br><strong>Co-Principal Investigator and Entrepreneurial Lead</strong>, with Hui Yang, Principal Investigator and Technical Lead</p>
             </li>
             <li>
-              <h3 class="funding-title">NIH I-Corps@NCATS Biomedical Translation Award</h3>
-              <p class="funding-meta">Penn State Center for Medical Innovation · 2024–2025</p>
-              <p class="funding-description"><strong>Kevin Mekulu, Principal Investigator and Entrepreneurial Lead</strong></p>
+              <span class="ledger-title">NIH I-Corps@NCATS Biomedical Translation Award</span>
+              <span class="ledger-when">2024 to 2025</span>
+              <p class="ledger-detail">Penn State Center for Medical Innovation<br><strong>Principal Investigator and Entrepreneurial Lead</strong></p>
             </li>
             <li>
-              <h3 class="funding-title">NSF I-Corps Mid-Atlantic Hub Award</h3>
-              <p class="funding-meta">$5,000 · 2023–2024</p>
-              <p class="funding-description"><strong>Kevin Mekulu, Principal Investigator and Entrepreneurial Lead</strong></p>
+              <span class="ledger-title">NSF I-Corps Mid-Atlantic Hub Award</span>
+              <span class="ledger-when">2023 to 2024</span>
+              <p class="ledger-detail"><span class="amount">$5,000</span><br><strong>Principal Investigator and Entrepreneurial Lead</strong></p>
             </li>
           </ul>
         </div>
@@ -332,23 +394,23 @@
       <section class="section" id="media" aria-labelledby="media-heading">
         <h2 id="media-heading">Media</h2>
         <div class="section-content">
-          <p>Selected coverage of my research, DementiAnalytics, and the translation of AI-enabled cognitive health technologies.</p>
-          <ul class="media-list">
+          <p class="media-intro">Selected coverage of my research, DementiAnalytics, and the translation of AI-enabled cognitive health technologies.</p>
+          <ul class="ledger">
             <li>
-              <span class="media-title"><a href="https://www.psu.edu/news/research/story/qa-can-ai-understand-human-brain-better-humans">Q&amp;A: Can AI understand the human brain better than humans?</a></span>
-              <span class="media-meta">Penn State News · 2026</span>
+              <span class="ledger-title"><a href="https://www.psu.edu/news/research/story/qa-can-ai-understand-human-brain-better-humans">Q&amp;A: Can AI understand the human brain better than humans?</a></span>
+              <span class="ledger-when">Penn State News, 2026</span>
             </li>
             <li>
-              <span class="media-title"><a href="https://www.forbes.com/profile/kevin-mekulu/?list=30under30-healthcare/">Forbes 30 Under 30: Healthcare</a></span>
-              <span class="media-meta">Forbes · 2025</span>
+              <span class="ledger-title"><a href="https://www.forbes.com/profile/kevin-mekulu/?list=30under30-healthcare/">Forbes 30 Under 30: Healthcare</a></span>
+              <span class="ledger-when">Forbes, 2025</span>
             </li>
             <li>
-              <span class="media-title"><a href="https://invent.psu.edu/stories/penn-state-research-based-startup-works-to-improve-dementia-screening-process/">Penn State research-based startup works to improve dementia screening process</a></span>
-              <span class="media-meta">Invent Penn State · 2024</span>
+              <span class="ledger-title"><a href="https://invent.psu.edu/stories/penn-state-research-based-startup-works-to-improve-dementia-screening-process/">Penn State research-based startup works to improve dementia screening process</a></span>
+              <span class="ledger-when">Invent Penn State, 2024</span>
             </li>
             <li>
-              <span class="media-title"><a href="https://www.mcknightsseniorliving.com/news/researcher-eyes-assisted-living-as-base-for-testing-ai-powered-dementia-screening-technology/">Researcher eyes assisted living as base for testing AI-powered dementia screening technology</a></span>
-              <span class="media-meta">McKnight’s Senior Living · 2024</span>
+              <span class="ledger-title"><a href="https://www.mcknightsseniorliving.com/news/researcher-eyes-assisted-living-as-base-for-testing-ai-powered-dementia-screening-technology/">Researcher eyes assisted living as base for testing AI-powered dementia screening technology</a></span>
+              <span class="ledger-when">McKnight’s Senior Living, 2024</span>
             </li>
           </ul>
         </div>
@@ -358,19 +420,19 @@
         <h2 id="about-heading">About</h2>
         <div class="section-content">
           <p>I am completing my Ph.D. in Industrial Engineering at Penn State, advised by Hui Yang, with graduation expected in May 2027. I previously earned an M.S. in Applied Computational Mathematics and Statistics at the University of Notre Dame and a B.S. in Applied Mathematics with honors (cum laude) from Virginia Tech, where I was also an NCAA Division I athlete. I previously worked in quantitative finance and capital markets at Wells Fargo and Citadel. My work brings systems engineering into collaboration with speech-language pathology, neuropsychology, and other disciplines studying human behavior.</p>
-          <div class="about-subsection">
+          <div class="about-sub">
             <h3>Teaching and mentoring</h3>
             <p>I have co-taught probability and statistics and supported courses in simulation and engineering analytics. I mentor undergraduate researchers across engineering, computer science, neuroscience, and health sciences. My teaching interests also include time-series analysis, computational modeling, and machine learning.</p>
           </div>
-          <div class="about-subsection">
+          <div class="about-sub">
             <h3>Selected recognition</h3>
-            <ul class="recognition">
-              <li><span class="award">Leighton Riess Graduate Fellowship in Engineering</span><span class="year">2026</span></li>
-              <li><span class="award"><a href="https://www.forbes.com/profile/kevin-mekulu/?list=30under30-healthcare/">Forbes 30 Under 30, Healthcare</a></span><span class="year">2025</span></li>
-              <li><span class="award"><a href="https://www.psu.edu/news/research/story/inaugural-penn-state-innovation-impact-awards-recipients-announced">Penn State Innovation Rockstar Award</a><span class="award-note">Inaugural recipient, for innovations in dementia care</span></span><span class="year">2025</span></li>
-              <li><span class="award">Industrial and Manufacturing Engineering Doctoral Student Fellowship, Penn State</span><span class="year">2025</span></li>
-              <li><span class="award"><a href="https://ai.psu.edu/third-annual-penn-state-ai-awards-honors-student-research/">Penn State AI Societal Impact Award, Honorable Mention</a><span class="award-note">AI-Powered Voice Analysis for Early Detection of Cognitive Decline in Senior Care</span></span><span class="year">2025</span></li>
-              <li><span class="award"><a href="https://news.engr.psu.edu/2024/diefenderfer-fellowship-winners-2024.aspx">Diefenderfer Fellowship for Researcher Entrepreneurs</a><span class="award-note">Two-time recipient</span></span><span class="year">2024–2025</span></li>
+            <ul class="ledger compact">
+              <li><span class="ledger-title">Leighton Riess Graduate Fellowship in Engineering</span><span class="ledger-when">2026</span></li>
+              <li><span class="ledger-title"><a href="https://www.forbes.com/profile/kevin-mekulu/?list=30under30-healthcare/">Forbes 30 Under 30, Healthcare</a></span><span class="ledger-when">2025</span></li>
+              <li><span class="ledger-title"><a href="https://www.psu.edu/news/research/story/inaugural-penn-state-innovation-impact-awards-recipients-announced">Penn State Innovation Rockstar Award</a></span><span class="ledger-when">2025</span><p class="ledger-detail">Inaugural recipient, for innovations in dementia care</p></li>
+              <li><span class="ledger-title">Industrial and Manufacturing Engineering Doctoral Student Fellowship, Penn State</span><span class="ledger-when">2025</span></li>
+              <li><span class="ledger-title"><a href="https://ai.psu.edu/third-annual-penn-state-ai-awards-honors-student-research/">Penn State AI Societal Impact Award, Honorable Mention</a></span><span class="ledger-when">2025</span><p class="ledger-detail">AI-Powered Voice Analysis for Early Detection of Cognitive Decline in Senior Care</p></li>
+              <li><span class="ledger-title"><a href="https://news.engr.psu.edu/2024/diefenderfer-fellowship-winners-2024.aspx">Diefenderfer Fellowship for Researcher Entrepreneurs</a></span><span class="ledger-when">2024 and 2025</span><p class="ledger-detail">Two-time recipient</p></li>
             </ul>
           </div>
         </div>
@@ -378,7 +440,7 @@
     </main>
 
     <footer class="site-footer">
-      <p>Kevin Mekulu · Penn State University</p>
+      <p>Kevin Mekulu, Penn State University</p>
       <div class="text-links" aria-label="Contact and profile links">
         <a href="mailto:kxm5924@psu.edu">Email</a>
         <a href="https://scholar.google.com/citations?hl=en&amp;user=X3Bn4NIAAAAJ">Google Scholar</a>
@@ -387,34 +449,149 @@
       </div>
     </footer>
   </div>
+
   <script>
+    // Navigation (mobile)
     const header = document.querySelector('.site-header');
     const navToggle = document.querySelector('.nav-toggle');
     const nav = document.querySelector('#primary-navigation');
-
     function closeNavigation() {
       header.classList.remove('nav-open');
       navToggle.setAttribute('aria-expanded', 'false');
       navToggle.setAttribute('aria-label', 'Open navigation');
     }
-
     navToggle.addEventListener('click', () => {
-      const isOpen = header.classList.toggle('nav-open');
-      navToggle.setAttribute('aria-expanded', String(isOpen));
-      navToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+      const open = header.classList.toggle('nav-open');
+      navToggle.setAttribute('aria-expanded', String(open));
+      navToggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
     });
+    nav.addEventListener('click', e => { if (e.target.closest('a')) closeNavigation(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeNavigation(); });
+    window.matchMedia('(min-width: 761px)').addEventListener('change', e => { if (e.matches) closeNavigation(); });
 
-    nav.addEventListener('click', event => {
-      if (event.target.closest('a')) closeNavigation();
-    });
+    // Symbolic recurrence plot of the hero statement
+    (() => {
+      const canvas = document.getElementById('recurrence');
+      const statement = document.getElementById('statement');
+      const readout = document.getElementById('readout');
+      const raw = statement.textContent;
 
-    document.addEventListener('keydown', event => {
-      if (event.key === 'Escape') closeNavigation();
-    });
+      // Wrap each letter so a traced pair can be lit up in the sentence.
+      const letters = [];
+      statement.setAttribute('aria-label', raw);
+      statement.textContent = '';
+      for (const c of raw) {
+        if (/[a-z]/i.test(c)) {
+          const s = document.createElement('span');
+          s.className = 'ch';
+          s.textContent = c;
+          s.setAttribute('aria-hidden', 'true');
+          statement.appendChild(s);
+          letters.push({ c: c.toLowerCase(), el: s });
+        } else {
+          const t = document.createElement('span');
+          t.textContent = c;
+          t.setAttribute('aria-hidden', 'true');
+          statement.appendChild(t);
+        }
+      }
+      const N = letters.length;
+      const css = getComputedStyle(document.documentElement);
+      const INK = css.getPropertyValue('--ink').trim();
+      const ACCENT = css.getPropertyValue('--accent').trim();
+      const RULE = css.getPropertyValue('--rule').trim();
+      const ctx = canvas.getContext('2d');
+      const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      let size = 0, cell = 0, pad = 0, progress = reduced ? 1 : 0, hover = null;
 
-    window.matchMedia('(min-width: 641px)').addEventListener('change', event => {
-      if (event.matches) closeNavigation();
-    });
+      function resize() {
+        const r = canvas.getBoundingClientRect();
+        const dpr = Math.min(window.devicePixelRatio || 1, 3);
+        canvas.width = Math.round(r.width * dpr);
+        canvas.height = Math.round(r.height * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        size = r.width;
+        pad = Math.max(10, size * 0.05);
+        cell = (size - pad * 2) / N;
+        draw();
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, size, size);
+        const reach = progress * N; // reveal outward from the main diagonal
+        if (hover) {
+          ctx.fillStyle = RULE;
+          ctx.globalAlpha = .55;
+          ctx.fillRect(pad, pad + hover.i * cell, N * cell, cell);
+          ctx.fillRect(pad + hover.j * cell, pad, cell, N * cell);
+          ctx.globalAlpha = 1;
+        }
+        const dot = Math.max(1, cell * 0.78);
+        const off = (cell - dot) / 2;
+        for (let i = 0; i < N; i++) {
+          for (let j = 0; j < N; j++) {
+            if (Math.abs(i - j) > reach) continue;
+            if (letters[i].c !== letters[j].c) continue;
+            const lit = hover && letters[i].c === hover.c;
+            ctx.fillStyle = lit ? ACCENT : INK;
+            ctx.globalAlpha = hover && !lit ? .35 : (i === j ? 1 : .9);
+            ctx.fillRect(pad + j * cell + off, pad + i * cell + off, dot, dot);
+          }
+        }
+        ctx.globalAlpha = 1;
+        if (hover) {
+          ctx.strokeStyle = ACCENT;
+          ctx.lineWidth = 1.25;
+          ctx.strokeRect(pad + hover.j * cell - 1.5, pad + hover.i * cell - 1.5, cell + 3, cell + 3);
+        }
+      }
+
+      function setHover(i, j) {
+        letters.forEach(l => l.el.classList.remove('on'));
+        if (i == null) { hover = null; readout.textContent = ''; draw(); return; }
+        hover = { i, j, c: letters[i].c };
+        letters[i].el.classList.add('on');
+        letters[j].el.classList.add('on');
+        const same = letters[i].c === letters[j].c;
+        readout.textContent = same
+          ? `“${letters[i].c}” recurs at letters ${Math.min(i, j) + 1} and ${Math.max(i, j) + 1}`
+          : `Letters ${i + 1} (“${letters[i].c}”) and ${j + 1} (“${letters[j].c}”) differ`;
+        draw();
+      }
+
+      function fromPointer(e) {
+        const r = canvas.getBoundingClientRect();
+        const x = e.clientX - r.left - pad, y = e.clientY - r.top - pad;
+        const j = Math.floor(x / cell), i = Math.floor(y / cell);
+        if (i < 0 || j < 0 || i >= N || j >= N) return setHover(null);
+        setHover(i, j);
+      }
+      canvas.addEventListener('pointermove', fromPointer);
+      canvas.addEventListener('pointerdown', fromPointer);
+      canvas.addEventListener('pointerleave', () => setHover(null));
+      canvas.addEventListener('blur', () => setHover(null));
+      canvas.addEventListener('keydown', e => {
+        const moves = { ArrowUp: [-1, 0], ArrowDown: [1, 0], ArrowLeft: [0, -1], ArrowRight: [0, 1] };
+        if (!moves[e.key]) return;
+        e.preventDefault();
+        const h = hover || { i: 0, j: 0 };
+        const [di, dj] = moves[e.key];
+        setHover(Math.min(N - 1, Math.max(0, h.i + di)), Math.min(N - 1, Math.max(0, h.j + dj)));
+      });
+
+      new ResizeObserver(resize).observe(canvas);
+
+      if (!reduced) {
+        const start = performance.now(), dur = 1400;
+        const step = t => {
+          const p = Math.min(1, (t - start) / dur);
+          progress = 1 - Math.pow(1 - p, 3);
+          draw();
+          if (p < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+      }
+    })();
   </script>
 </body>
 </html>
