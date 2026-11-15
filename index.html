@@ -40,6 +40,7 @@
     p:last-child { margin-bottom: 0; }
     h1, h2, h3 { font-weight: 400; color: var(--ink); }
     .page { width: min(100% - 5rem, 72rem); margin-inline: auto; }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
     .skip-link { position: absolute; left: 1rem; top: -6rem; padding: .6rem 1rem; background: var(--paper-raised); z-index: 10; }
     .skip-link:focus { top: .75rem; }
 
@@ -60,12 +61,10 @@
     .site-header.nav-open .nav-toggle-lines::after { transform: rotate(-45deg); }
 
     /* Hero */
-    .hero { display: grid; grid-template-columns: minmax(0, 1fr) 23rem; gap: 4.5rem; align-items: end; padding: 5.5rem 0 5rem; border-bottom: 1px solid var(--rule); }
+    .hero { display: grid; grid-template-columns: minmax(0, 1fr) 19rem; gap: 4.5rem; align-items: center; padding: 5.5rem 0 5rem; border-bottom: 1px solid var(--rule); }
     h1 { margin: 0 0 1.1rem; font: 300 clamp(3.4rem, 7.4vw, 6.4rem)/.96 var(--serif); font-variation-settings: "opsz" 72; letter-spacing: -.035em; }
     .affiliation { margin-bottom: 2.6rem; color: var(--muted); font-size: 1rem; }
     .hero-statement { max-width: 34ch; margin-bottom: 2.4rem; color: var(--ink); font: 400 clamp(1.55rem, 2.4vw, 2.05rem)/1.36 var(--serif); font-variation-settings: "opsz" 36; letter-spacing: -.012em; text-wrap: pretty; }
-    .hero-statement .ch { transition: background-color .12s ease, color .12s ease; border-radius: 2px; }
-    .hero-statement .ch.on { background: var(--accent); color: var(--paper-raised); }
     .text-links { display: flex; align-items: center; flex-wrap: wrap; gap: .2rem 1.6rem; font-size: .95rem; }
     .text-links a { min-height: 2.75rem; display: inline-flex; align-items: center; }
 
@@ -83,7 +82,7 @@
     .lede { color: var(--ink); font: 400 1.3rem/1.55 var(--serif); font-variation-settings: "opsz" 20; }
 
     /* Research chain: the five stages read as states in a chain */
-    .chain { position: relative; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); column-gap: 1.25rem; margin: 2.6rem 0 3rem; padding: 0; list-style: none; }
+    .chain { position: relative; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); column-gap: 1rem; margin: 2.4rem 0 3rem; padding: 0; list-style: none; }
     .chain::before { content: ""; position: absolute; top: .45rem; left: .45rem; right: calc(20% - .45rem); height: 1px; background: var(--ink); }
     .chain li { position: relative; padding-top: 1.75rem; }
     .chain li::before { content: ""; position: absolute; top: 0; left: 0; width: .9rem; height: .9rem; border: 1px solid var(--ink); border-radius: 50%; background: var(--paper); }
@@ -148,17 +147,25 @@
     .teach-notes .proposed { margin-top: .8rem; color: var(--muted); }
     .teach-notes .proposed em { color: var(--ink); font-family: var(--serif); font-size: 1.05rem; }
     .about-side h2 { margin: 0; font: 400 1.6rem/1.2 var(--serif); font-variation-settings: "opsz" 32; letter-spacing: -.01em; }
-    .portrait { display: block; width: 100%; max-width: 13rem; height: auto; margin-top: 1.75rem; border-radius: 2px; filter: saturate(.85); }
+    .portrait { display: block; width: 100%; height: auto; border-radius: 2px; filter: saturate(.85); }
+    #research .section-content { max-width: none; }
+    .research-top { display: grid; grid-template-columns: minmax(0, 1fr) 15rem; gap: 3.5rem; align-items: start; margin-bottom: 2.75rem; }
+    .research-top .chain { margin-bottom: 0; }
+    .research-top .plot { margin-top: .4rem; }
+    #statement .ch { transition: background-color .12s ease, color .12s ease; border-radius: 2px; }
+    #statement .ch.on { background: var(--accent); color: var(--paper-raised); }
 
     .site-footer { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 1rem 2rem; padding: 2rem 0 3rem; border-top: 1px solid var(--ink); color: var(--muted); font-size: .9rem; }
     .site-footer p { margin: 0; }
 
     @media (max-width: 960px) {
-      .hero { grid-template-columns: minmax(0, 1fr) 17rem; gap: 3rem; }
+      .hero { grid-template-columns: minmax(0, 1fr) 15rem; gap: 3rem; }
       .section { grid-template-columns: 1fr; row-gap: 1.6rem; }
       .themes { grid-template-columns: 1fr; gap: 1.6rem; }
       .directions { grid-template-columns: 1fr; gap: 2rem; }
-      .portrait { max-width: 10rem; margin-top: 1.25rem; }
+      .hero-portrait { order: -1; max-width: 11rem; }
+      .research-top { grid-template-columns: 1fr; gap: 2rem; }
+      .research-top .plot { max-width: 17rem; }
       .teach-notes { grid-template-columns: 1fr; gap: 1.75rem; }
       .figures { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 1.75rem; }
     }
@@ -226,35 +233,40 @@
         <div>
           <h1 id="name">Kevin Mekulu</h1>
           <p class="affiliation">Ph.D. Candidate in Industrial Engineering, Penn State University</p>
-          <p class="hero-statement" id="statement">I develop quantitative methods to uncover the structure of human behavior and build interpretable measures of cognition and health.</p>
+          <p class="hero-statement">I develop quantitative methods to uncover the structure of human behavior and build interpretable measures of cognition and health.</p>
           <div class="text-links" aria-label="Profile links">
             <a href="https://scholar.google.com/citations?hl=en&amp;user=X3Bn4NIAAAAJ">Google Scholar</a>
             <a href="https://www.linkedin.com/in/kevinmekulu">LinkedIn</a>
             <a href="mailto:kxm5924@psu.edu">kxm5924@psu.edu</a>
           </div>
         </div>
-        <figure class="plot" aria-labelledby="plot-caption">
-          <div class="plot-frame">
-            <canvas id="recurrence" tabindex="0" role="img" aria-label="Symbolic recurrence plot of the research statement. A mark at row i and column j means the characters at positions i and j are the same letter."></canvas>
-          </div>
-          <figcaption id="plot-caption">
-            Symbolic recurrence plot of my research statement. Each mark pairs two positions holding the same letter, the representation behind my work on character-level speech biomarkers. Point at the plot to trace a pair.
-            <span class="plot-readout" id="readout" aria-live="polite"></span>
-          </figcaption>
-        </figure>
+        <img class="portrait hero-portrait" src="assets/kevin-mekulu.jpg" width="500" height="500" alt="Portrait of Kevin Mekulu">
       </section>
 
       <section class="section" id="research" aria-labelledby="research-heading">
         <h2 id="research-heading">Research</h2>
         <div class="section-content">
-          <p class="lede">Speech, eye movements, physiological signals, and task performance contain patterns of timing, sequence, and organization. I study how to represent those patterns, what they reveal about human cognition, and when they support reliable measurement.</p>
-          <ol class="chain" aria-label="Research progression, from behavior to translation">
-            <li><strong>Behavior</strong><span>Speech, gaze, physiological signals, task performance</span></li>
-            <li><strong>Models</strong><span>Stochastic, nonlinear, and AI methods</span></li>
-            <li><strong>Discovery</strong><span>Interpretable behavioral signatures</span></li>
-            <li><strong>Measurement</strong><span>Cognitive and health indicators</span></li>
-            <li><strong>Translation</strong><span>Prospective studies and technology</span></li>
-          </ol>
+          <div class="research-top">
+            <div>
+              <p class="lede"><span id="statement">Speech, eye movements, physiological signals, and task performance contain patterns of timing, sequence, and organization.</span> I study how to represent those patterns, what they reveal about human cognition, and when they support reliable measurement.</p>
+            <ol class="chain" aria-label="Research progression, from behavior to translation">
+              <li><strong>Behavior</strong><span>Speech, gaze, physiological signals, task performance</span></li>
+              <li><strong>Models</strong><span>Stochastic, nonlinear, and AI methods</span></li>
+              <li><strong>Discovery</strong><span>Interpretable behavioral signatures</span></li>
+              <li><strong>Measurement</strong><span>Cognitive and health indicators</span></li>
+              <li><strong>Translation</strong><span>Prospective studies and technology</span></li>
+            </ol>
+            </div>
+          <figure class="plot" aria-labelledby="plot-caption">
+            <div class="plot-frame">
+              <canvas id="recurrence" tabindex="0" role="img" aria-label="Symbolic recurrence plot of the first sentence of this section. A mark at row i and column j means the characters at positions i and j are the same letter."></canvas>
+            </div>
+            <figcaption id="plot-caption">
+              Symbolic recurrence plot of the opening sentence. Each mark pairs two positions holding the same letter, the representation behind my character-level speech biomarkers. Point at it to trace a pair.
+              <span class="plot-readout" id="readout" aria-live="polite"></span>
+            </figcaption>
+          </figure>
+          </div>
           <div class="themes">
             <div>
               <h3>Behavioral dynamics</h3>
@@ -526,7 +538,6 @@
       <section class="section" id="about" aria-labelledby="about-heading">
         <div class="about-side">
           <h2 id="about-heading">About</h2>
-          <img class="portrait" src="assets/kevin-mekulu.jpg" width="500" height="500" alt="Portrait of Kevin Mekulu" loading="lazy">
         </div>
         <div class="section-content">
           <p>I am completing my Ph.D. in Industrial Engineering at Penn State, advised by Hui Yang, with graduation expected in May 2027. I previously earned an M.S. in Applied Computational Mathematics and Statistics at the University of Notre Dame and a B.S. in Applied Mathematics with honors (cum laude) from Virginia Tech, where I was also an NCAA Division I athlete. I previously worked in quantitative finance and capital markets. I bring systems engineering to questions long held by speech-language pathology and neuropsychology, and much of my work is built side by side with collaborators in those fields.</p>
@@ -583,8 +594,11 @@
 
       // Wrap each letter so a traced pair can be lit up in the sentence.
       const letters = [];
-      statement.setAttribute('aria-label', raw);
       statement.textContent = '';
+      const sr = document.createElement('span');
+      sr.className = 'sr-only';
+      sr.textContent = raw;
+      statement.appendChild(sr);
       for (const c of raw) {
         if (/[a-z]/i.test(c)) {
           const s = document.createElement('span');
